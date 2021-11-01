@@ -32,8 +32,9 @@ public class MainActivity extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (name.getText().toString() == "" || mssv.getText().toString() == "" || birth.getText().toString() == "" || email.getText().toString() == "") {
-                    Toast.makeText(MainActivity.this, "Thieu thong tin", Toast.LENGTH_SHORT);
+                if (name.getText().toString().length() == 0 || mssv.getText().toString().length() == 0 || birth.getText().toString().length() == 0 || email.getText().toString().length() == 0) {
+                   Toast toast = Toast.makeText(MainActivity.this, "Thieu thong tin", Toast.LENGTH_SHORT);
+                    toast.show();
                 }
             }
         });
